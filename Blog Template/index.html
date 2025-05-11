@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tailwind CSS Blog  </title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script defer src="https://unpkg.com/alpinejs@3.10.5/dist/cdn.min.js"></script>
+    </head>
+
+    <body>
+        <div> 
+
+            <header>
+                <div class="bg-purple-600" x-data="{ isOpen: false }">
+                  <nav class="container px-3 py-6 mx-auto md:flex md:justify-between md:items-center">
+                    <div class="flex items-center justify-between">
+                      <a class="text-xl font-bold text-white"
+                        href="#">
+                        TailBlog </a>
+        
+                      <!-- Mobile menu button -->
+                      <div @click="isOpen = !isOpen" class="flex md:hidden">
+                        <button type="button" class="text-gray-800 hover:text-gray-400 focus:outline-none focus:text-gray-400"
+                          aria-label="toggle menu">
+                          <svg viewBox="0 0 24 24" class="w-6 h-6 text-white fill-current">
+                            <path fill-rule="evenodd"
+                              d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z">
+                            </path>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+        
+                    <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+                    <div :class="isOpen ? 'flex' : 'hidden'"
+                      class="flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0">
+                      <a class="text-gray-100 hover:text-indigo-200" href="index.html">Home</a>
+                      <a class="text-gray-100 hover:text-indigo-200" href="blog.html">Blog</a>
+                      <a class="text-gray-100 hover:text-indigo-200" href="blog-page.html">Single Blog Page</a>
+                    </div>
+                  </nav>
+                </div>
+        
+              </header>
+
+              <section class="px-2 py-8 bg-white lg:py-20 md:px-0">
+                <div class="container items-center px-8 mx-auto max-w-7xl">
+                  <div class="flex flex-wrap items-center sm:-mx-3">
+                    <div class="w-full md:w-1/2 md:px-3">
+                      <div class="w-full pb-6 space-y-6 sm:max-w-md lg:max-w-lg md:space-y-4 lg:space-y-8 sm:pr-5 lg:pr-0 md:pb-0">
+                        <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-4xl lg:text-5xl">
+                            The Wat to Lose Weight and Belly Fat
+                        </h1>
+                        <p class="mx-auto text-base text-gray-500 sm:max-w-md lg:text-xl md:max-w-3xl">It is a long established fact that a reader will be distracted by the readable content of a page when looking at.</p>
+                        <div class="relative flex flex-col sm:flex-row sm:space-x-4">
+                          <a href="#_" class="flex items-center w-full px-6 py-3 mb-3 text-lg text-white bg-purple-600 rounded-md sm:mb-0 hover:bg-indigo-700 sm:w-auto">
+                            Read More
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                      <div class="w-full h-auto overflow-hidden rounded-md">
+                          <img src="https://cdn.pixabay.com/photo/2015/11/12/17/20/tea-1040653__340.jpg">
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="bg-white lg:px-20 lg:py-20">
+                <div class="flex flex-col items-center justify-center">
+                    <div class="flex justify-center">
+                        <h1 class="text-2xl font-bold text-purple-600 border-b-4 border-purple-400">Simple Posts</h1>
+                    </div>
+                <article class="p-6 mb-6 bg-white">
+                    <h2 class="mb-2 text-lg font-medium">Blog post title 1</h2>
+                    <p class="mb-4 text-sm text-gray-600">January 1, 2023</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel malesuada ipsum. Sed in nulla velit. Integer auctor placerat augue, at tincidunt velit euismod eu.</p>
+                  </article>
+                  <article class="p-6 mb-6 bg-white">
+                    <h2 class="mb-2 text-lg font-medium">Blog post title 2</h2>
+                    <p class="mb-4 text-sm text-gray-600">January 2, 2023</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel malesuada ipsum. Sed in nulla velit. Integer auctor placerat augue, at tincidunt velit euismod eu.</p>
+                  </article>
+                  <article class="p-6 mb-6 bg-white">
+                    <h2 class="mb-2 text-lg font-medium">Blog post title 3</h2>
+                    <p class="mb-4 text-sm text-gray-600">January 2, 2023</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel malesuada ipsum. Sed in nulla velit. Integer auctor placerat augue, at tincidunt velit euismod eu.</p>
+                  </article>
+                </div>
+              </section>
+              <section class="container mx-auto bg-white">
+                <div class="flex justify-center">
+                    <h1 class="text-2xl font-bold text-purple-600 border-b-4 border-purple-400">Features Posts</h1>
+                </div>
+                <div class="grid gap-2 m-4 lg:grid-cols-3">
+                    <div class="p-4">
+                        <div class="border-2 border-gray-200 rounded-lg">
+                            <img class="object-cover object-center w-full lg:h-48 md:h-36"
+                                src="https://source.unsplash.com/collection/190728/1000x900" alt="blog">
+                            <div class="p-6">
+                                <span
+                                    class="inline-block p-2 mb-2 text-xs font-medium tracking-widest text-indigo-800 bg-indigo-200 rounded">Category
+                                </span>
+                                <h1 class="mb-2 text-lg font-medium text-gray-900">The Title</h1>
+                                <p class="mb-2 text-sm tracking-wide text-gray-700">Photo booth fam kinfolk cold-pressed
+                                    sriracha
+                                    leggings
+                                    jianbing microdosing tousled waistcoat.</p>
+                                <div class="flex items-center ">
+                                    <a class="inline-flex items-center text-indigo-500 cursor-pointer md:mb-2 lg:mb-0">Read
+                                        More
+            
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mt-1" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                        </svg>
+                                    </a>
+            
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="border-2 border-gray-200 rounded-lg">
+                            <img class="object-cover object-center w-full lg:h-48 md:h-36"
+                                src="https://source.unsplash.com/collection/190727/1000x900" alt="blog">
+                            <div class="p-6">
+                                <span
+                                    class="inline-block p-2 mb-2 text-xs font-medium tracking-widest text-red-800 bg-red-200 rounded">Category
+                                </span>
+                                <h1 class="mb-2 text-lg font-medium text-gray-900">The Title</h1>
+                                <p class="mb-2 text-sm tracking-wide text-gray-700">Photo booth fam kinfolk cold-pressed
+                                    sriracha
+                                    leggings
+                                    jianbing microdosing tousled waistcoat.</p>
+                                <div class="flex items-center ">
+                                    <a class="inline-flex items-center text-indigo-500 cursor-pointer md:mb-2 lg:mb-0">Read
+                                        More
+            
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mt-1" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="border-2 border-gray-200 rounded-lg">
+                            <img class="object-cover object-center w-full lg:h-48 md:h-36"
+                                src="https://source.unsplash.com/collection/190726/1000x900" alt="blog">
+                            <div class="p-6">
+                                <span
+                                    class="inline-block p-2 mb-2 text-xs font-medium tracking-widest text-green-800 bg-green-200 rounded">Category
+                                </span>
+                                <h1 class="mb-2 text-lg font-medium text-gray-900">The Title</h1>
+                                <p class="mb-2 text-sm tracking-wide text-gray-700">Photo booth fam kinfolk cold-pressed
+                                    sriracha
+                                    leggings
+                                    jianbing microdosing tousled waistcoat.</p>
+                                <div class="flex items-center ">
+                                    <a class="inline-flex items-center text-indigo-500 cursor-pointer md:mb-2 lg:mb-0">Read
+                                        More
+            
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mt-1" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer class="p-6 text-center bg-white">
+                <p>Copyright © 2023 My Blog</p>
+              </footer>
+        </div>
+        
+    </body>
+
+</html>
